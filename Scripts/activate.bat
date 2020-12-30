@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=D:\git\AssistPy"
+set "VIRTUAL_ENV=D:\projects\AssistPy"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

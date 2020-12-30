@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"D:\git\AssistPy"
+$VIRTUAL_ENV = r"D:\projects\AssistPy"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

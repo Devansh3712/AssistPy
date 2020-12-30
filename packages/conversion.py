@@ -3,18 +3,18 @@ Module for taking user voice input
 and converting text to speech
 '''
 
+#Importing modules
 try:
     import pyttsx3
     import speech_recognition as sr
 
 except:
     print('Speech Recognition and TTS not setup')
-    exit()
 
 #Class for taking user voice input
 class Listen:
 
-    def speech_to_content():
+    def speech_to_content(self):
 
         #Initializing Speech Recognition object
         obj = sr.Recognizer()
