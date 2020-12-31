@@ -16,8 +16,13 @@ class Search:
         self.content = content
 
     def wiki_search(self):
-        result = wikipedia.summary(self.content, sentences = 2)
-        return result
+
+        try:
+            result = wikipedia.summary(self.content, sentences = 2)
+            return result
+
+        except:
+            return 'No results found'
 
 '''
 Devansh Singh, 2021

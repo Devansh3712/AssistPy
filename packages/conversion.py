@@ -9,7 +9,8 @@ try:
     import speech_recognition as sr
 
 except:
-    print('Speech Recognition and TTS not setup')
+    print('Speech Recognition and TTS modules not setup')
+    exit()
 
 #Class for taking user voice input
 class Listen:

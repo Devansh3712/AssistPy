@@ -13,5 +13,7 @@ except:
 
 user_input = conv.Listen()
 user_query = user_input.speech_to_content()
-user_output = conv.Speak(user_query)
+
+query = wiki.Search(user_query)
+user_output = conv.Speak(query.wiki_search())
 user_output.text_to_speech()
