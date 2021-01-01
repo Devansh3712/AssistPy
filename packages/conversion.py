@@ -23,7 +23,7 @@ class Listen:
         with sr.Microphone() as source:
 
             try:
-                audio     = obj.record(source, duration = 10)
+                audio     = obj.record(source, duration = 5)
                 converted = obj.recognize_google(audio)
                 return converted
 

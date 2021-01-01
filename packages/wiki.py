@@ -10,6 +10,7 @@ except:
     print('Wikipedia module not setup')
     exit()
 
+#Class for searching wikipedia for user query
 class Search:
 
     def __init__(self, content):

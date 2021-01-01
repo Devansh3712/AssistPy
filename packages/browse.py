@@ -5,6 +5,7 @@ searching the net
 
 try:
     import os
+    import subprocess
     import webbrowser as wb
     import re
     from urllib.parse import quote

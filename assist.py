@@ -6,6 +6,7 @@ Main AssistPy Program
 try:
     import packages.conversion as conv
     import packages.wiki as wiki
+    import packages.play as playvid
 
 except:
     print('Modules not setup')
@@ -14,6 +15,6 @@ except:
 user_input = conv.Listen()
 user_query = user_input.speech_to_content()
 
-query = wiki.Search(user_query)
-user_output = conv.Speak(query.wiki_search())
-user_output.text_to_speech()
+query = playvid.Search(user_query)
+user_output = playvid.Play(query.get_link())
+user_output.play_url()
