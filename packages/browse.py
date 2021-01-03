@@ -3,6 +3,7 @@ Module for opening browser and
 searching the net
 '''
 
+#Importing modules
 try:
     import os
     import subprocess
@@ -26,6 +27,7 @@ class Browse:
         website = re.search("[.]com$", self.content)
 
         if website:
+            #If website exists, open it in a new tab
             wb.open(self.content, new = 2)
 
         else:

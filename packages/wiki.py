@@ -6,6 +6,7 @@ using wikipedia API
 #Importing modules
 try:
     import wikipedia
+
 except:
     print('Wikipedia module not setup')
     exit()
@@ -13,7 +14,7 @@ except:
 #Class for searching wikipedia for user query
 class Search:
 
-    def __init__(self, content):
+    def __init__(self, content = str):
         self.content = content
 
     def wiki_search(self):
