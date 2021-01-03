@@ -12,9 +12,51 @@ except:
     print('Modules not setup')
     exit()
 
-user_input = conv.Listen()
-user_query = user_input.speech_to_content()
+#Ascii Art/ Menus
+ascii_art = '''
+  ___          _     _  ______      
+ / _ \        (_)   | | | ___ \     
+/ /_\ \___ ___ _ ___| |_| |_/ /   _ 
+|  _  / __/ __| / __| __|  __/ | | |
+| | | \__ \__ \ \__ \ |_| |  | |_| |
+\_| |_/___/___/_|___/\__\_|   \__, |
+                               __/ |
+                              |___/ 
+'''
 
-query = playvid.Search(user_query)
-user_output = playvid.Play(query.get_link())
-user_output.play_url()
+options = '''
++---------------+
+|Options        |
++---------------+
+|SysInfo        |
+|Play           |
+|Wiki           |
+|Browse         |
+|Weather        |
+|Date & Time    |
++---------------+
+'''
+
+#Printing ascii art of program logo
+print(ascii_art)
+
+#Welcoming the user
+welcome = conv.Speak('Welcome to AssistPy')
+welcome.text_to_speech()
+
+#Taking user preference
+preference = conv.Speak('Would you prefer to speak or type?')
+preference.text_to_speech()
+
+preference_input = input()
+
+#Main loop if preference is type
+if preference_input.lower() == 'type':
+
+    while True:
+
+        #Print list of available options
+        print(options)
+
+        #Taking user option input
+        user_input = input("Enter your choice: ")
