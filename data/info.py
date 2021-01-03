@@ -90,9 +90,6 @@ class TimeDate:
 
         return datetime_template.format(date, month, year, day, hour, minute, meridian)
 
-query = TimeDate.current_date_time()
-print(query)
-
 '''
 Devansh Singh, 2021
 GitHub: Devansh3712

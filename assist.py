@@ -7,6 +7,7 @@ try:
     import packages.conversion as conv
     import packages.wiki as wiki
     import packages.play as playvid
+    import data.info as info
 
 except:
     print('Modules not setup')
@@ -60,3 +61,11 @@ if preference_input.lower() == 'type':
 
         #Taking user option input
         user_input = input("Enter your choice: ")
+
+        if user_input.lower() == "sysinfo":
+
+            sysinfo = info.Info.system_info()
+            print(sysinfo)
+
+        else:
+            print("Choose a valid option")
