@@ -4,6 +4,7 @@ Main AssistPy Program
 
 #Importing modules
 try:
+    import packages.browse as browser
     import packages.conversion as conv
     import packages.wiki as wiki
     import packages.play as playvid
@@ -42,17 +43,17 @@ options = '''
 print(ascii_art)
 
 #Welcoming the user
-welcome = conv.Speak('Welcome to AssistPy')
+welcome = conv.Speak("Welcome to AssistPy")
 welcome.text_to_speech()
 
 #Taking user preference
-preference = conv.Speak('Would you prefer to speak or type?')
+preference = conv.Speak("Would you prefer to speak or type?")
 preference.text_to_speech()
 
-preference_input = input()
+preference_input = input("Enter your preference: ")
 
 #Main loop if preference is type
-if preference_input.lower() == 'type':
+if preference_input.lower() == "type":
 
     while True:
 
@@ -66,6 +67,50 @@ if preference_input.lower() == 'type':
 
             sysinfo = info.Info.system_info()
             print(sysinfo)
+
+        elif user_input.lower() == "play":
+
+            vid_name = input("Enter video name: ")
+            option   = input("Open in Browser/Desktop: ")
+
+            video    = playvid.Search(vid_name)
+            url      = video.get_link()
+            player   = playvid.Play(url)
+
+            if option.lower() == "browser":
+                player.play_url_browser()
+
+            else:
+                player.play_url()
+
+        elif user_input.lower() == "wiki":
+
+            query  = input("Enter your query: ")
+            result = wiki.Search(query)
+            print(result.wiki_search())
+
+        elif user_input.lower() == "browse":
+
+            query  = input("Enter your query: ")
+            result = browser.Browse(query)
+            result.search_internet()
+
+        elif user_input.lower() == "weather":
+
+            city   = input("Enter your city name: ")
+            result = info.Weather(city)
+            print(result.weather_data())
+
+        elif "date" in user_input.lower() or "time" in user_input.lower():
+
+            result = info.TimeDate.current_date_time()
+            print(result)
+
+        elif user_input.lower() in ['exit', 'quit']:
+
+            thankyou = conv.Speak("Thank you for using AssistPy")
+            thankyou.text_to_speech()
+            exit()
 
         else:
             print("Choose a valid option")
