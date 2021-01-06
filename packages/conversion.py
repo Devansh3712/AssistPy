@@ -15,7 +15,7 @@ except:
 #Class for taking user voice input
 class Listen:
 
-    def speech_to_content(self):
+    def speech_to_content():
 
         #Initializing Speech Recognition object
         obj = sr.Recognizer()
