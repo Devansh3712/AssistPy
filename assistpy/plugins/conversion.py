@@ -51,6 +51,6 @@ class Speak:
             raise Exception('Error in Text to Speech')
 
 '''
+AssistPy
 Devansh Singh, 2021
-GitHub: Devansh3712
 '''

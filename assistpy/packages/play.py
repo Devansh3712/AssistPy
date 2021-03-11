@@ -5,6 +5,7 @@ from youtube
 
 #Importing modules
 try:
+
     import urllib.request
     import urllib.parse
     import re
@@ -14,6 +15,7 @@ try:
     from time import sleep
 
 except:
+
     print('Play module not setup')
     exit()
 
@@ -56,6 +58,6 @@ class Play:
         wb.open(self.url, new = 2)
 
 '''
+AssistPy
 Devansh Singh, 2021
-GitHub: Devansh3712
 '''

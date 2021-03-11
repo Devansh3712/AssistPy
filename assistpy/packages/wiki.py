@@ -27,6 +27,6 @@ class Search:
             return 'No results found'
 
 '''
+AssistPy
 Devansh Singh, 2021
-GitHub: Devansh3712
 '''

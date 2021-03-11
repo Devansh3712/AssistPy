@@ -9,6 +9,7 @@ try:
     import re
 
 except:
+
     print('Regex module not setup')
     exit()
 
@@ -186,3 +187,8 @@ class Identify:
                 return True
 
         return False
+
+'''
+AssistPy
+Devansh Singh, 2021
+'''

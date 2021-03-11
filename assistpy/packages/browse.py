@@ -5,6 +5,7 @@ searching the net
 
 #Importing modules
 try:
+
     import os
     import subprocess
     import webbrowser as wb
@@ -12,6 +13,7 @@ try:
     from urllib.parse import quote
 
 except:
+
     print('Browsing modules not setup')
     exit()
 
@@ -48,6 +50,6 @@ class Browse:
             return 'Program not found'
 
 '''
+AssistPy
 Devansh Singh, 2021
-GitHub: Devansh3712
 '''

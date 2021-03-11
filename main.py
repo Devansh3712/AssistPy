@@ -4,14 +4,16 @@ Main AssistPy Program
 
 #Importing modules
 try:
-    import packages.browse as browser
-    import packages.conversion as conv
-    import packages.wiki as wiki
-    import packages.play as playvid
-    import packages.regex as regex
-    import data.info as info
+
+    import assistpy.packages.browse as browser
+    import assistpy.packages.wiki as wiki
+    import assistpy.packages.play as playvid
+    import assistpy.packages.info as info
+    import assistpy.plugins.regex as regex
+    import assistpy.plugins.conversion as conv
 
 except:
+    
     print('Modules not setup')
     exit()
 

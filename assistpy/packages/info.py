@@ -5,12 +5,14 @@ city given by user
 
 #Import modules
 try:
+
     import requests
     import json
     import platform
     import datetime
 
 except:
+
     print('Info module not setup')
     exit()
 
@@ -91,6 +93,6 @@ class TimeDate:
         return datetime_template.format(date, month, year, day, hour, minute, meridian)
 
 '''
+AssistPy
 Devansh Singh, 2021
-GitHub: Devansh3712
 '''
