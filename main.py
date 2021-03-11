@@ -11,6 +11,7 @@ try:
     import assistpy.packages.info as info
     import assistpy.plugins.regex as regex
     import assistpy.plugins.conversion as conv
+    import assistpy.packages.news as news
 
 except:
     
@@ -36,9 +37,11 @@ options = '''
 |SysInfo        |
 |Play           |
 |Wiki           |
+|News           |
 |Browse         |
 |Weather        |
 |Date & Time    |
+|About          |
 +---------------+
 '''
 
@@ -109,6 +112,18 @@ if preference_input.lower() == "type":
             result = info.TimeDate.current_date_time()
             print(result)
 
+        elif user_input.lower() == "news":
+
+            country     = input("Enter initials of your country : ")
+            result      = news.News(country).get_news()
+            count       = 1
+
+            for news in result:
+                
+                news = news.partition("-")
+                print(f'{count}. {news[0]}')
+                count += 1
+
         elif user_input.lower() in ['exit', 'quit']:
 
             thankyou = conv.Speak("Thank you for using AssistPy")
@@ -116,7 +131,6 @@ if preference_input.lower() == "type":
             exit()
 
         else:
-
             print("Choose a valid option")
 
 #Main loop if preference is speak
@@ -207,3 +221,8 @@ elif preference_input.lower() == "speak":
 
             valid = conv.Speak("Choose a valid option")
             valid.text_to_speech()
+
+'''
+AssistPy
+Devansh Singh, 2021
+'''
